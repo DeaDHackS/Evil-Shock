@@ -3,8 +3,14 @@ Evil-Shock is a powerful tool made to exploit Shellshock, what's special with Ev
 Evil-Shock will find the perfect command also known as Injection Point and then execute further commands to gain remote access via the injection point, so far for the first version Evil-Shock can check for 4 different Injection Point:
 <p>
 1 - NSLookup
+</p>
+<p>
 2 - Echo
+</p>
+<p>
 3 - LS
+</p>
+<p>
 4 - Ping
 </p>
 
