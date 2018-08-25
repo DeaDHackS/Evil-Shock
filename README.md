@@ -22,6 +22,6 @@ In further version more injections points will be added.
 # Bind Shell / Auto-Point-Injection:
 ![BindShell Example](https://i.imgur.com/9dVjdQu.png)
 # Reverse Shell / Auto-Point-Injection:
-# WARNING: MY FIREWALL IS BLOCKING CONNECTION SO I CANNOT SHOW THE BIND SHELL BUT IT SHOULD WORK FINE IN ANY ANOTHER CASE :)
+# WARNING: MY FIREWALL IS BLOCKING CONNECTION SO I CANNOT SHOW THE REVERSE SHELL BUT IT SHOULD WORK FINE IN ANY ANOTHER CASE :)
 ![ReverseShell Example](https://i.imgur.com/ZlZcgmR.png)
 
