@@ -25,3 +25,14 @@ In further version more injections points will be added.
 # WARNING: MY FIREWALL IS BLOCKING CONNECTION SO I CANNOT SHOW THE REVERSE SHELL BUT IT SHOULD WORK FINE IN ANY ANOTHER CASE :)
 ![ReverseShell Example](https://i.imgur.com/ZlZcgmR.png)
 
+# Features
+Evil-Shock is equiped with some useful and interresting command:
+
+t|target=<target link> : This will set the target.          
+shell=<reverse / bind> : This will set the shell type.
+p|port=<port> : Port to open the shell on.             
+help : Print help menu.             
+inject=<string> : This will allow an user to inject a custom command into the web server.          
+user-agent=<string> : When info grabbing you can choose to have a custom user-agent or use the default one.        
+srv-persistent : When only bind shell is selected and injected this will then injected a persistent backdoor.    
+inject-only : This will test Injection Points only, not inject anything else.      
