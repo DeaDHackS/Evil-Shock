@@ -18,6 +18,12 @@ Evil-Shock will find the perfect command also known as Injection Point and then 
 
 In further version more injections points will be added.
 
+# System Supported:
+Linux and Windows!
+Make sure if running on windows to not remove the nc file, since it contains the nc.exe which allow you to backdoor a server.
+On linux make sure to have netcat installed.
+
+
 # Screenshots / Examples
 # Bind Shell / Auto-Point-Injection:
 ![BindShell Example](https://i.imgur.com/9dVjdQu.png)
