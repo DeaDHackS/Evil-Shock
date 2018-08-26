@@ -48,7 +48,11 @@ inject-only : This will test Injection Points only, not inject anything else.
 Evil-Shock supports 3 different type of shells, reverse, bind and bash shells!
 <p>
 Reverse - Victim will connect back to you.
+</p>
+<p>
 Bind - You will connect directly to the target (Recommended)
+</p>
+<p>
 Bash(Reverse Only) - Rather than creating a netcat listener on the victim and bash listener will be injected.
 </p>
 # Usage
