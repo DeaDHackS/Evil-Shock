@@ -1,5 +1,3 @@
-## IF WAITING ON US TO UPLOAD THE SCRIPT FILE WAIT WE ARE DEVELOPING IT BUT WE ARE JUST SETTING UP THE GITHUB RESPORITIE! ITS NEARLY DONE
-
 # Evil-Shock Description 
 Evil-Shock is a powerful tool made to exploit Shellshock, what's special with Evil-Shock is that it doesn't base his attacks on one parameter, example another tool might inject a simple "echo Vulnerable" and see if the server executes that. In many case the server wont execute that command but can execute another command ;)
 Evil-Shock will find the perfect command also known as Injection Point and then execute further commands to gain remote access via the injection point, so far for the first version Evil-Shock can check for 4 different Injection Point:
@@ -41,4 +39,17 @@ help : Print help menu.
 inject=<string> : This will allow an user to inject a custom command into the web server.          
 user-agent=<string> : When info grabbing you can choose to have a custom user-agent or use the default one.        
 srv-persistent : When only bind shell is selected and injected this will then injected a persistent backdoor.    
-inject-only : This will test Injection Points only, not inject anything else.      
+inject-only : This will test Injection Points only, not inject anything else. 
+ 
+# Shells
+Evil-Shock supports 3 different type of shells, reverse, bind and bash shells!
+
+Reverse - Victim will connect back to you.
+Bind - You will connect directly to the target (Recommended)
+Bash(Reverse Only) - Rather than creating a netcat listener on the victim and bash listener will be injected.
+
+# Usage
+perl evilshock.pl -help
+
+# Examples
+perl evilshock -t=http://shellshock.site/cgi-bin/menu --shell=bind --port=1234 --srv-persistent
