@@ -55,6 +55,7 @@ Bind - You will connect directly to the target (Recommended)
 <p>
 Bash(Reverse Only) - Rather than creating a netcat listener on the victim and bash listener will be injected.
 </p>
+
 # Usage
 perl evilshock.pl -help
 
