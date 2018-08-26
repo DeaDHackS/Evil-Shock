@@ -16,6 +16,9 @@ Evil-Shock will find the perfect command also known as Injection Point and then 
 
 In further version more injections points will be added.
 
+# WINDOWS VERSION WARNING
+Netcat normally doesn't exist for Windows, but i had a look into Metasploit windows-libraries and it has a nc.exe program for backdooring. Please report any case of infections while using that nc.exe, thanks!
+
 # System Supported:
 Linux and Windows!
 Make sure if running on windows to not remove the nc file, since it contains the nc.exe which allow you to backdoor a server.
@@ -43,11 +46,11 @@ inject-only : This will test Injection Points only, not inject anything else.
  
 # Shells
 Evil-Shock supports 3 different type of shells, reverse, bind and bash shells!
-
+<p>
 Reverse - Victim will connect back to you.
 Bind - You will connect directly to the target (Recommended)
 Bash(Reverse Only) - Rather than creating a netcat listener on the victim and bash listener will be injected.
-
+</p>
 # Usage
 perl evilshock.pl -help
 
