@@ -16,6 +16,14 @@ Evil-Shock will find the perfect command also known as Injection Point and then 
 
 In further version more injections points will be added.
 
+# Test / Train with Evil-Shock!
+<p>
+I recommend download and installing in your favorite virtual machine manager the iso file from VulnHub:
+https://www.vulnhub.com/entry/pentester-lab-cve-2014-6271-shellshock,104/
+Which was used to test and develop Evil-Shock!
+</p>
+
+
 # WINDOWS VERSION WARNING
 Netcat normally doesn't exist for Windows, but i had a look into Metasploit windows-libraries and it has a nc.exe program for backdooring. Please report any case of infections while using that nc.exe, thanks!
 
